@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<head>
+<script src="/assets/jquery.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Ubuntu|ZCOOL+KuaiLe" rel="stylesheet">
+
+<style>
+ul {
+      padding: 10px;
+      background: yellow;
+      text-align: center;
+}
+li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+    }
+body {
+  font-family: 'ZCOOL KuaiLe', cursive;
+  margin: 0 auto;
+  max-width: 600px;
+  background: yellow;
+}
+div {
+  height: 250px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 29px;
+}
+h1 {
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+  font-size: 75px;
+  color: hotpink;
+  margin: 60px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color: #bbbbbb;
+  margin: 0px 0 0px 0;
+  color: blue;
+  
+}
+p {
+  font-family: 'ZCOOL KuaiLe', cursive;
+  color: rgba(255,18,25,1);
+  background: blue;
+  background: linear-gradient(bottom, rgba(25,90,60,1), rgba(0,0,0,.8));
+  background: -webkit-linear-gradient(bottom, rgba(25,90,60,1), rgba(0,0,0,.8));
+  background: -moz-linear-gradient(bottom, rgba(25,90,60,1), rgba(0,0,0,.8));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  color: green;
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+.price {
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-family: 'Indie Flower', sans-serif;
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<ul>
+      <li><button onclick=snack()>Snack</button></li>
+      <li><button onclick=lunch()>Lunch</button></li>
+      <li><button onclick=drink()>Drink</button></li>
+</ul>
+
+<h1>Mohammed's Restaurant</h1>
+<h2>"The best restaurant in New York!"</h2>
+
+<div id="Food">
+
+<script>
+  SnackImages = [
+    'url("https://www.seriouseats.com/images/20070401istockpbjbeauty.jpg")',
+    'url("https://cdn.vox-cdn.com/thumbor/I2YrB6K36X89Jd904gwcat70zA0=/0x0:960x641/1200x800/filters:focal(404x245:556x397)/cdn.vox-cdn.com/uploads/chorus_image/image/60860497/cheerios.0.jpg")',
+    'url("http://www.energyrecovery.com/wp-content/uploads/2014/12/Water-1600x900.jpg")',
+  ]
+  
+  LunchImages = [
+    'url("https://www.washingtonpost.com/rf/image_982w/2010-2019/WashingtonPost/2016/08/24/Food/Images/LunchboxPastaSalad-57941472008038.jpg")',
+    'url("http://www.ndtv.com/cooks/images/tamarind.000.rice.jpg")',
+    'url("https://www.thedailymeal.com/sites/default/files/story/Main-spongebob_movi_D17472C_2_.jpg")',
+  ]
+  
+  DrinkImages = [
+    'url("https://vignette.wikia.nocookie.net/spongebob/images/9/90/Best_Frenemies_016.png/revision/latest/scale-to-width-down/350?cb=20130623191038")',
+    'url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-milkshake-3-ways-still001-1-1527006537.jpg")',
+    'url("https://food.fnr.sndimg.com/content/dam/images/food/fullset/2016/6/6/3/SI0105_Rainbow-smoothies_s4x3.jpg.rend.hgtvcom.616.462.suffix/1465324215585.jpeg")',
+  ]
+  
+SnackDivs = [
+  '<div class="item"><p>Peanutbutter and Jelly sandwich <span class="price">$5.50</span><br /><small>You have never seen a better combination of tastes. Peanutbutter and Jelly compliment one another in a unique way. </small></p></div>',
+
+'<div class="item"><p>Honey Nut Cheerios <span class="price">$2.50</span><br /><small>You know what they say, "Breakfast is the most important meal of the day!". Honeynut Cheerios are healthy for your heart and taste great! Milk not included.</small></p></div>',
+
+'<div class="item"><p>Water <span class="price">$174.99</span><br /><small>Everyone needs water. Our water however, is not like most water. Our water is 100% pure and makes you live longer!.</small></p></div>',
+  ]
+  
+LunchDivs = [
+  '<div class="item"><p>Pasta <span class="price">$15</span><br /><small> Its the best pasta in the world! Its healthy and tasty. You may never eat a better pasta than this one, all for the price of only $75! </small></p></div>',
+
+'<div class="item"><p>Rice <span class="price">$215.50</span><br /><small>Rice in general is amazing, everyone loves it. this rice, however, is different: ITS BETTER. Everyone needs to try this atleast once in their life.</small></p></div>',
+
+'<div class="item"><p>Krabby Patty <span class="price">$14.99</span><br /><small>Have you ever watched Spongebob Squarepants? if so, you probably heard of the famed Krabby Patty. I am happy to say, we have made this delicious burger into a reality.</small></p></div>',
+  ]
+  
+DrinkDivs = [
+  '<div class="item"><p>Kelp Shake <span class="price">$35</span><br /><small>Another food inspired from Spongebob Squarepants, the Kelp Shake has been known to make its drinkers wild due to its addictive taste. One sip is all it takes.</small></p></div>',
+
+'<div class="item"><p>Milk Shake<span class="price">$12.50</span><br /><small>Everyone likes a good milkshake. It takes us back to those warm summer days when we were kids. These milk shakes come in different flavors, each with its own unique surprise.</small></p></div>',
+
+'<div class="item"><p>Smoothie <span class="price">$14.99</span><br /><small>Smoothies are beloved by all. it is one of our best selling items and is what we are known for. Give our famed smoothie a try!</small></p></div>',
+  ]
+  
+ $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+  
+  function snack() {
+
+    Yum = document.getElementById("Food")
+    Yum.innerHTML = ''
+    Yum.innerHTML += SnackDivs[0]
+    Yum.innerHTML += SnackDivs[1]
+    Yum.innerHTML += SnackDivs[2]
+  
+    items = document.getElementsByClassName("item")
+    items[0].style.background = SnackImages[0]
+    items[0].style.backgroundSize = '100% 100%'
+    items[1].style.background = SnackImages[1]
+    items[2].style.background = SnackImages[2]
+    onclick=this.classList.toggle("show-description")
+  }
+  for (i=0; i<3; i=i+1) {
+    items[i].style.background = SnackImages [i]
+  }
+  
+  function lunch() {
+    
+    Yum = document.getElementById("Food")
+    Yum.innerHTML = ''
+    Yum.innerHTML += LunchDivs[0]
+    Yum.innerHTML += LunchDivs[1]
+    Yum.innerHTML += LunchDivs[2]
+
+    for (i=0; i<3; i=i+1) {
+    items[i].style.background = LunchImages[i]
+    }
+  items[0].style.backgroundSize = '100% 100%'
+  items[1].style.backgroundSize = '100% 100%'
+  items[2].style.backgroundSize = '100% 100%'
+  onclick=this.classList.toggle("show-description")
+  }
+  
+  function drink() {
+    
+    Yum = document.getElementById("Food")
+    Yum.innerHTML = ''
+    Yum.innerHTML += DrinkDivs[0]
+    Yum.innerHTML += DrinkDivs[1]
+    Yum.innerHTML += DrinkDivs[2]
+    
+    for (i=0; i<3; i=i+1) {
+    items[i].style.background = DrinkImages[i]
+    }
+  items[0].style.backgroundSize = '100% 100%'
+  items[1].style.backgroundSize = '100% 100%'
+  items[2].style.backgroundSize = '100% 100%'
+  onclick=this.classList.toggle("show-description")
+  }
+  
+</script>
+
+</body>
