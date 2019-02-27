@@ -134,27 +134,27 @@ small {
   ]
   
 SnackDivs = [
-  '<div class="item"><p>Peanutbutter and Jelly sandwich <span class="price">$5.50</span><br /><small>You have never seen a better combination of tastes. Peanutbutter and Jelly compliment one another in a unique way. </small></p></div>',
+  '<div class="item" onclick=this.classList.toggle("show-description")><p>Peanutbutter and Jelly sandwich <span class="price">$5.50</span><br /><small>You have never seen a better combination of tastes. Peanutbutter and Jelly compliment one another in a unique way. </small></p></div>',
 
-'<div class="item"><p>Honey Nut Cheerios <span class="price">$2.50</span><br /><small>You know what they say, "Breakfast is the most important meal of the day!". Honeynut Cheerios are healthy for your heart and taste great! Milk not included.</small></p></div>',
+'<div class="item"    onclick=this.classList.toggle("show-description")><p>Honey Nut Cheerios <span class="price">$2.50</span><br /><small>You know what they say, "Breakfast is the most important meal of the day!". Honeynut Cheerios are healthy for your heart and taste great! Milk not included.</small></p></div>',
 
-'<div class="item"><p>Water <span class="price">$174.99</span><br /><small>Everyone needs water. Our water however, is not like most water. Our water is 100% pure and makes you live longer!.</small></p></div>',
+'<div class="item" onclick=this.classList.toggle("show-description")><p>Water <span class="price">$174.99</span><br /><small>Everyone needs water. Our water however, is not like most water. Our water is 100% pure and makes you live longer!.</small></p></div>',
   ]
   
 LunchDivs = [
-  '<div class="item"><p>Pasta <span class="price">$15</span><br /><small> Its the best pasta in the world! Its healthy and tasty. You may never eat a better pasta than this one, all for the price of only $75! </small></p></div>',
+  '<div class="item" onclick=this.classList.toggle("show-description")><p>Pasta <span class="price">$15</span><br /><small> Its the best pasta in the world! Its healthy and tasty. You may never eat a better pasta than this one, all for the price of only $75! </small></p></div>',
 
-'<div class="item"><p>Rice <span class="price">$215.50</span><br /><small>Rice in general is amazing, everyone loves it. this rice, however, is different: ITS BETTER. Everyone needs to try this atleast once in their life.</small></p></div>',
+'<div class="item" onclick=this.classList.toggle("show-description")><p>Rice <span class="price">$215.50</span><br /><small>Rice in general is amazing, everyone loves it. this rice, however, is different: ITS BETTER. Everyone needs to try this atleast once in their life.</small></p></div>',
 
-'<div class="item"><p>Krabby Patty <span class="price">$14.99</span><br /><small>Have you ever watched Spongebob Squarepants? if so, you probably heard of the famed Krabby Patty. I am happy to say, we have made this delicious burger into a reality.</small></p></div>',
+'<div class="item" onclick=this.classList.toggle("show-description")><p>Krabby Patty <span class="price">$14.99</span><br /><small>Have you ever watched Spongebob Squarepants? if so, you probably heard of the famed Krabby Patty. I am happy to say, we have made this delicious burger into a reality.</small></p></div>',
   ]
   
 DrinkDivs = [
-  '<div class="item"><p>Kelp Shake <span class="price">$35</span><br /><small>Another food inspired from Spongebob Squarepants, the Kelp Shake has been known to make its drinkers wild due to its addictive taste. One sip is all it takes.</small></p></div>',
+  '<div class="item" onclick=this.classList.toggle("show-description")><p>Kelp Shake <span class="price">$35</span><br /><small>Another food inspired from Spongebob Squarepants, the Kelp Shake has been known to make its drinkers wild due to its addictive taste. One sip is all it takes.</small></p></div>',
 
-'<div class="item"><p>Milk Shake<span class="price">$12.50</span><br /><small>Everyone likes a good milkshake. It takes us back to those warm summer days when we were kids. These milk shakes come in different flavors, each with its own unique surprise.</small></p></div>',
+'<div class="item" onclick=this.classList.toggle("show-description")><p>Milk Shake<span class="price">$12.50</span><br /><small>Everyone likes a good milkshake. It takes us back to those warm summer days when we were kids. These milk shakes come in different flavors, each with its own unique surprise.</small></p></div>',
 
-'<div class="item"><p>Smoothie <span class="price">$14.99</span><br /><small>Smoothies are beloved by all. it is one of our best selling items and is what we are known for. Give our famed smoothie a try!</small></p></div>',
+'<div class="item" onclick=this.classList.toggle("show-description")><p>Smoothie <span class="price">$14.99</span><br /><small>Smoothies are beloved by all. it is one of our best selling items and is what we are known for. Give our famed smoothie a try!</small></p></div>',
   ]
   
  $('div').on('click', function() {
@@ -174,7 +174,6 @@ DrinkDivs = [
     items[0].style.backgroundSize = '100% 100%'
     items[1].style.background = SnackImages[1]
     items[2].style.background = SnackImages[2]
-    onclick=this.classList.toggle("show-description")
   }
   for (i=0; i<3; i=i+1) {
     items[i].style.background = SnackImages [i]
@@ -194,7 +193,6 @@ DrinkDivs = [
   items[0].style.backgroundSize = '100% 100%'
   items[1].style.backgroundSize = '100% 100%'
   items[2].style.backgroundSize = '100% 100%'
-  onclick=this.classList.toggle("show-description")
   }
   
   function drink() {
@@ -211,7 +209,6 @@ DrinkDivs = [
   items[0].style.backgroundSize = '100% 100%'
   items[1].style.backgroundSize = '100% 100%'
   items[2].style.backgroundSize = '100% 100%'
-  onclick=this.classList.toggle("show-description")
   }
   
 </script>
