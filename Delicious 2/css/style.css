@@ -7,6 +7,9 @@
 .container {
 	overflow: hidden;
 }
+.row {
+	overflow: hidden;
+}
 body {
 	font-size: 15px;
     line-height: 1.52;
