@@ -6,9 +6,13 @@
 */
 .container-fluid {
 	overflow: hidden;
+	padding: 0px;
+	margin: 0px;
 }
 .row {
 	overflow: hidden;
+	padding: 0px;
+	margin: 0px;
 }
 body {
 	font-size: 15px;
