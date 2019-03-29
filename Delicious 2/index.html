@@ -25,7 +25,7 @@
   <section id="banner">
     <div class="bg-color">
       <header id="header">
-        <div class="container-fluid">
+        <div class="container">
           <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="#about">About</a>
@@ -36,7 +36,7 @@
           <span onclick="openNav()" class="pull-right menu-icon">☰</span>
         </div>
       </header>
-      <div class="container-fluid">
+      <div class="container">
         <div class="row">
           <div class="inner text-center">
             <h1 class="logo-name">Mo's Cuisine</h1>
@@ -52,7 +52,7 @@
   <!-- event -->
   <section id="event">
     <div class="bg-color" class="section-padding">
-      <div class="container-fluid">
+      <div class="container">
         <div class="row">
           <div class="col-xs-12 text-center" style="padding:60px;">
             <h1 class="header-h">Discounts & Special offers</h1>
@@ -86,7 +86,7 @@
   <!--/ event -->
   <!-- menu -->
   <section id="menu-list" class="section-padding">
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
         <div class="col-md-12 text-center marb-35">
           <h1 class="header-h">Menu List</h1>
@@ -96,13 +96,50 @@
         <div class="col-md-12  text-center" id="menu-flters">
           <ul>
             <li><a class="filter active" data-filter=".menu-restaurant">Show All</a></li>
+			<li><a class="filter" data-filter=".brunch">Brunch</a></li>
             <li><a class="filter" data-filter=".breakfast">Snack</a></li>
             <li><a class="filter" data-filter=".lunch">Lunch</a></li>
             <li><a class="filter" data-filter=".dinner">Dinner</a></li>
+			<li><a class="filter" data-filter=".dessert">Dessert</a></li>
           </ul>
         </div>
 
         <div id="menu-wrapper">
+            <div class="brunch menu-restaurant">
+              <span class="clearfix">
+                <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Apple Pie</a>
+                <span style="left: 166px; right: 44px;" class="menu-line"></span>
+                <span class="menu-price">$9.99</span>
+              </span>
+              <span class="menu-subtitle"></span>
+            </div>
+			
+        <div class="brunch menu-restaurant">
+          <span class="clearfix">
+            <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Bagels</a>
+            <span style="left: 166px; right: 44px;" class="menu-line"></span>
+            <span class="menu-price">$3.99</span>
+          </span>
+          <span class="menu-subtitle"></span>
+        </div>
+		
+        <div class="brunch menu-restaurant">
+          <span class="clearfix">
+            <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Pancakes</a>
+            <span style="left: 166px; right: 44px;" class="menu-line"></span>
+            <span class="menu-price">$7.99</span>
+          </span>
+          <span class="menu-subtitle"></span>
+        </div>
+		
+        <div class="brunch menu-restaurant">
+          <span class="clearfix">
+            <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">French Toast</a>
+            <span style="left: 166px; right: 44px;" class="menu-line"></span>
+            <span class="menu-price">$6.99</span>
+          </span>
+          <span class="menu-subtitle"></span>
+        </div>
 
           <div class="breakfast menu-restaurant">
             <span class="clearfix">
@@ -190,6 +227,42 @@
               <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Pizza</a>
               <span style="left: 166px; right: 44px;" class="menu-line"></span>
               <span class="menu-price">$25.99</span>
+            </span>
+            <span class="menu-subtitle"></span>
+          </div>
+		  
+          <div class="dessert menu-restaurant">
+            <span class="clearfix">
+              <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Brownies</a>
+              <span style="left: 166px; right: 44px;" class="menu-line"></span>
+              <span class="menu-price">$68.99</span>
+            </span>
+            <span class="menu-subtitle"></span>
+          </div>
+		  
+          <div class="dessert menu-restaurant">
+            <span class="clearfix">
+              <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Ice Cream</a>
+              <span style="left: 166px; right: 44px;" class="menu-line"></span>
+              <span class="menu-price">$12.99</span>
+            </span>
+            <span class="menu-subtitle"></span>
+          </div>
+		  
+          <div class="dessert menu-restaurant">
+            <span class="clearfix">
+              <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Cake</a>
+              <span style="left: 166px; right: 44px;" class="menu-line"></span>
+              <span class="menu-price">$419.99</span>
+            </span>
+            <span class="menu-subtitle"></span>
+          </div>
+		  
+          <div class="dessert menu-restaurant">
+            <span class="clearfix">
+              <a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">Cookies</a>
+              <span style="left: 166px; right: 44px;" class="menu-line"></span>
+              <span class="menu-price">$9.99</span>
             </span>
             <span class="menu-subtitle"></span>
           </div>
