@@ -55,6 +55,7 @@ function draw() {
   text("Time: "+ time.toFixed(0),50,75)
   text("Level: "+ level,50,100)
   time=time-0.025
+if (touches.length == 0)   {
   if (keyIsDown(LEFT_ARROW)){
     x=x-5
 }
@@ -67,6 +68,12 @@ function draw() {
   if (keyIsDown(UP_ARROW)){
     y=y-5
 }
+}
+else { 
+	x= touches[0].x
+	y= touches[0].y
+}
+
   fill(255,255,255)
   circle(a*s,b,15*s)
   a=a+5*direction2h
